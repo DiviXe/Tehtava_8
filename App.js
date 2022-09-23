@@ -18,10 +18,9 @@ export default function App() {
   });
 
   const searchCordinates = () => {
-    let input = address.replace(" ");
+    let text = address.replace(" ");
     fetch(
-      `http://www.mapquestapi.com/geocoding/v1/address?key=d8Chjsag9iS3ZraGY1kS0NXBzmdvwoOV&location=` +
-        input
+      `http://www.mapquestapi.com/geocoding/v1/address?key=d8Chjsag9iS3ZraGY1kS0NXBzmdvwoOV&location=${text}`
     )
       .then((response) => response.json())
       .then((data) => {
